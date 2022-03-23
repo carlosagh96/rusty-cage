@@ -1,5 +1,8 @@
 const DECORATION:&str="================================================================================";
 
+//Rusty Quotes
+//Sample quotes may be harmful and pollitically incorrect, but i don't give a f*** about that, if you feel offended in any way, it means these quotes are good :)
+
 /*
 // Quotes as structs
 struct Quote
