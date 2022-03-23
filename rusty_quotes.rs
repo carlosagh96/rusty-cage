@@ -1,7 +1,9 @@
-const DECORATION:&str="================================================================================";
-
 //Rusty Quotes
-//Sample quotes may be harmful and pollitically incorrect, but i don't give a f*** about that, if you feel offended in any way, it means these quotes are good :)
+//Sample quotes may be harmful and pollitically incorrect, but i don't give a f*** about that. If you feel offended in any way, it means these quotes are good :)
+//Las frases incluidas pueden resultar dañinas o políticamente incorrectas, pero a mi eso me importa un c4r4j0. Si se siente ofendido de alguna forma, significa que estas frases son buenas :)
+
+//80 char long decoration
+const DECORATION:&str="================================================================================";
 
 /*
 // Quotes as structs
