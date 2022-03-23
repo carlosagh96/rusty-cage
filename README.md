@@ -1,1 +1,1 @@
-My 1rst week using RustLang
+My 1rst month using RustLang
