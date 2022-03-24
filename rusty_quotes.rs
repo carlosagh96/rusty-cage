@@ -2,78 +2,59 @@ use std::convert::TryInto;
 use std::env;
 
 //Rusty Quotes
-//Sample quotes may be harmful and pollitically incorrect, but i don't give a f*** about that. If you feel offended in any way, it means these quotes are good :)
-//Las frases incluidas pueden resultar dañinas o políticamente incorrectas, pero a mi eso me importa un caraj0. Si se siente ofendido de alguna forma, significa que estas frases son buenas :)
-// ._. line 72
+
+//May contain offensive content. Look away
 
 //Constants
 const STR_DEC:&str="================================================================================";
 const STR_LB:&str="\n";
 const STR_SPACE:&str=" ";
 
-/*
-// Quotes as structs
-struct Quote
-{
-	text:String,
-	auth:String
-}
-impl Quote
-{
-	fn new(a:&str,t:&str)->Quote
-	{
-		Quote
-		{
-			text:t.to_string(),
-			auth:a.to_string()
-		}
-	}
-	fn show(&self)->String
-	{
-		format!("\"{}\"\n\n{}",self.text,self.auth)
-	}
-}
-*/
-
 fn main()
 {
 	let thy_args:Vec<String>=env::args().collect();
-	if !(thy_args.len()==2)
+
+	// Show error and get out
+	if thy_args.len()>2
 	{
+		println!("ERROR: Número de argumentos no válido");
 		return;
 	}
-	let index:&str=&thy_args[1];
-	let index:usize=match index.trim().parse()
+
+	//Show help
+	if thy_args.len()==1
 	{
-		Ok(num)=>num,
-		Err(_)=>return
+		let ppp=&thy_args[0];
+		println!("\nFrases\n======\n\nEscrito por カルロサグ\nhttps://t.me/CarlosAGH\n2022-03-24\n\nUsos\n\n$ {0} total\n└─> Obtener el total de frases\n\n$ {0} N\n└─> Mostrar la frase número N\n",ppp);
+		return;
+	}
+
+	let mut return_quote=true;
+	let index_raw:&str=&thy_args[1];
+	let index:usize=match index_raw.trim().parse()
+	{
+		Ok(num)=>
+		{
+			num
+		},
+		Err(_)=>
+		{
+			return_quote=false;
+			0
+		}
 	};
 
-	// Quotes as structs
-
-	// Quotes as structs. Template
-	// quotes.push(Quote::new("author","text"));
-
-	/*
-	let mut quotes:Vec<Quote>=vec![];
-
-	quotes.push(Quote::new("Anónimo","El que nace para culo, la patada le cae del cielo"));
-	quotes.push(Quote::new("Dicho cubano","DPEPDPE"));
-	quotes.push(Quote::new("Dicho cubano","Cuando el mal es de cagar, no valen guayabas verdes"));	
-
-	quotes.push(Quote::new("Dante Alighieri","Los lugares más oscuros del infierno están reservados para aquellos que mantienen su neutralidad en tiempos de crisis moral"));
-	quotes.push(Quote::new("Huey Newton","Un pueblo desarmado es un esclavo o está sujeto a la esclavitud en cualquier momento"));
-	quotes.push(Quote::new("Vladimir Ilyich Ulyanov","Los hechos son testarudos"));
-	quotes.push(Quote::new("Vladimir Putin","Quien no eche de menos la unión soviética, no tiene corazón. Quien quiere que vuelva, no tiene cerebro"));
-	*/
-
-	//Quotes as tuples
+	if !return_quote
+	{
+		let show_total=if index_raw=="total"{true}else{false};
+		if !show_total
+		{
+			println!("ERROR: Argumento no válido");
+			return;
+		}
+	}
 
 	let mut quotes:Vec<(&str,&str)>=vec![];
-
-	//Quotes as tuples. Template
-	//quotes.push(("Author","Text"));
-	//quotes.push(("",""));
 
 	//Anonimous
 	quotes.push(("Anónimo","No confíes en nadie, recuerda que el diablo fue un angel"));
@@ -174,16 +155,20 @@ fn main()
 	quotes.push(("Vladimir Ilyich Ulyanov","Los hechos son testarudos"));
 	quotes.push(("Vladimir Putin","Quien no eche de menos la unión soviética, no tiene corazón. Quien quiere que vuelva, no tiene cerebro"));
 
-	//Get quote vector length
-	if index>=quotes.len()
+	//Get the total quotes
+	if index_raw=="total"
 	{
+		println!("{}",quotes.len());
 		return;
 	}
 
-	//Quotes as structs
-	//println!("{}",quotes[index].show());
-
-	//Quotes as tuples
+	//Get quote vector length
+	if index>=quotes.len()
+	{
+		println!("ERROR: Se sale del límite");
+		return;
+	}
+	//Obtaining quote as String from &str
 	let the_quote=&quotes[index];
 	let text_raw={
 		let quote_index=&the_quote.1;
@@ -191,7 +176,7 @@ fn main()
 		evolved
 	};
 
-
+	//Create new text
 	let text_new={
 		let mut text_final=String::from("");
 		let mut lines_base:Vec<String>=vec![];
