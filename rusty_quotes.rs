@@ -72,6 +72,7 @@ fn main()
 
 	//Quotes as tuples. Template
 	//quotes.push(("Author","Text"));
+	//quotes.push(("",""));
 
 	//Anonimous
 	quotes.push(("Anónimo","No confíes en nadie, recuerda que el diablo fue un angel"));
@@ -94,6 +95,9 @@ fn main()
 
 	//Computer Science & Programming
 	quotes.push(("Alan Kay","Mucho del software hoy en día se parece a una pirámide egipcia: con millones de ladrillos apilados uno encima del otro, sin integridad estructural y hecho por pura fuerza bruta y miles de esclavos"));
+	quotes.push(("Bill Gates","Medir el progreso de la programación por líneas de código es como medir el progreso en la construcción de aviones por el peso"));
+	quotes.push(("Bill Gates","El éxito es un pésimo profesor. Seduce a la gente inteligente y la lleva a pensar que no puede perder"));
+	quotes.push(("Bill Gates","Solo hay un truco para el software, y es usar un componente de software que ya haya sido escrito"));
 	quotes.push(("Bjarne Stroustrup","Sólo hay dos tipos de lenguajes: aquellos de los que la gente se queja y aquellos que nadie usa"));
 	quotes.push(("Bjarne Stroustrup","Siempre deseé que mi computadora fuera tan fácil de usar como mi teléfono. Mi deseo se ha hecho realidad: ya no sé usar mi teléfono"));
 	quotes.push(("Brian Kernighan","Depurar es dos veces más difícil que escribir el código en primer lugar. Entonces si escribes el código tan astutamente como sea posible, no eres (por definición) tan listo como para depurarlo"));
@@ -101,9 +105,14 @@ fn main()
 	quotes.push(("Martin Fowler","Cualquier tonto puede escribir código que un ordenador entiende. Los buenos programadores escriben código que los humanos pueden entender"));
 
 	//Engineers & Entrepenourship
+	quotes.push(("Elon Musk","Me gustaria morir en Marte, pero no en el impacto"));
 	quotes.push(("Henry Ford","Los que renuncian son más numerosos que los que fracasan"));
 	quotes.push(("Henry Ford","Nada es difícil si se divide en pequeñas partes"));
 	quotes.push(("Henry Ford","Pensar es el trabajo más difícil que existe, tal vez por eso son unos pocos los que lo tienen"));
+	quotes.push(("Henry Ford","El fracaso es una gran oportunidad para empezar otra vez con más inteligencia"));
+	quotes.push(("Henry Ford","El verdadero progreso es el que pone la tecnología al alcance de todos"));
+	quotes.push(("Henry Ford","Los obstáculos son esas cosas espantosas que ves cuando apartas los ojos de tu"));
+	quotes.push(("Henry Ford","El mejor automovilista es aquel que conduce con imaginación. Imagina que su familia va con él en el auto"));
 
 	//Scientists
 	quotes.push(("Albert Einstein","La vida es muy peligrosa, no por las personas que hacen el mal, sino por las que se sientan a ver lo que pasa"));
@@ -128,7 +137,15 @@ fn main()
 	quotes.push(("Stephen Hawking","Si los extraterrestres nos visitaran, ocurriría lo mismo que cuando Cristóbal Colón desembarcó en América y nada salió bien para los nativos americanos"));
 	quotes.push(("Stephen Hawking","La ciencia no deja mucho espacio ni para milagros ni para Dios"));
 
-	//Politics (Liberalism, Anti-Marxism, Anti-Comunism and Anti-Socialism)
+	//Politics (Liberalism, Nationalism, Anti-Marxism, Anti-Comunism and Anti-Socialism)
+	quotes.push(("Abraham Lincoln","El gobierno del pueblo, por el pueblo, para el pueblo no debe desaparecer de la tierra"));
+	quotes.push(("Abraham Lincoln","Asegúrate de poner tus pies en el lugar correcto, luego mantente firme"));
+	quotes.push(("Abraham Lincoln","Aquellos que buscan el mal en las personas seguro lo encontrarán"));
+	quotes.push(("Abraham Lincoln","Prefiero ser un don nadie pequeño a ser un malvado alguien"));
+	quotes.push(("Abraham Lincoln","Aquellos que le niegan la libertad a otros, no la merecen"));
+	quotes.push(("Abraham Lincoln","Enseñen a los niños para que no sea necesario enseñar a los adultos"));
+	quotes.push(("Abraham Lincoln","Todos los humanos nacen iguales, sin embargo, es la última vez que lo somos"));
+	quotes.push(("Abraham Lincoln","Una persona es como un árbol y su reputación es como su sombra. La sombra es lo que pensamos de esa persona, el árbol es su verdadero ser"));
 	quotes.push(("Karl Popper","El marxismo murió de marxismo"));
 	quotes.push(("Karl Popper","Quien sea incapaz de hablar claro debe callar hasta poder hacerlo"));
 	quotes.push(("Ludwig Von Mises","Si la Historia pudiese enseñarnos algo, sería que la propiedad privada está inextricablemente unida con la civilización"));
@@ -149,12 +166,10 @@ fn main()
 	quotes.push(("Milton Friedman","Nada es tan permanente como un programa temporal del gobierno"));
 	quotes.push(("Milton Friedman","Los grandes avances de la civilización, ya sean en arquitectura o pintura, en ciencia o literatura, jamás han venido de un gobierno central"));
 
-	//Politicians, war, etc...
-	quotes.push(("Abraham Lincoln","El gobierno del pueblo, por el pueblo, para el pueblo no debe desaparecer de la tierra"));
-
-	//Deconstructive facts
+	//Misc
 	quotes.push(("Dante Alighieri","Los lugares más oscuros del infierno están reservados para aquellos que mantienen su neutralidad en tiempos de crisis moral"));
 	quotes.push(("Huey Newton","Un pueblo desarmado es un esclavo o está sujeto a la esclavitud en cualquier momento está, por supuesto, en pecado mortal"));
+	quotes.push(("Jesucristo","No he venido a traer la paz, sino la espada"));
 	quotes.push(("Vladimir Ilyich Ulyanov","Los hechos son testarudos"));
 	quotes.push(("Vladimir Putin","Quien no eche de menos la unión soviética, no tiene corazón. Quien quiere que vuelva, no tiene cerebro"));
 
