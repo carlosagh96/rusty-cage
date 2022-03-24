@@ -1,4 +1,5 @@
 use std::convert::TryInto;
+use std::env;
 
 //Rusty Quotes
 //Sample quotes may be harmful and pollitically incorrect, but i don't give a f*** about that. If you feel offended in any way, it means these quotes are good :)
@@ -36,7 +37,7 @@ impl Quote
 
 fn main()
 {
-	let thy_args:Vec<String>=std::env::args().collect();
+	let thy_args:Vec<String>=env::args().collect();
 	if !(thy_args.len()==2)
 	{
 		return;
